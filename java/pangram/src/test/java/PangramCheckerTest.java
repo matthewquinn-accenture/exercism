@@ -52,7 +52,6 @@ public class PangramCheckerTest {
         assertFalse(pangramChecker.isPangram("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void pangramWithMixedCaseAndPunctuationIsRecognizedAsPangram() {
         assertTrue(pangramChecker.isPangram("\"Five quacking Zephyrs jolt my wax bed.\""));
