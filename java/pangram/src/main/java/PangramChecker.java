@@ -11,13 +11,14 @@ public class PangramChecker {
         char[] inputChars = noBlanksInput.toCharArray();
 
         for (char character : inputChars) {
-            alphabet.add(character);
+            if(!Character.isDigit(character)){
+                alphabet.add(character);
+            }
+
             if(alphabet.size() == 26){
                 return true;
             }
         }
-
         return false;
     }
-
 }
