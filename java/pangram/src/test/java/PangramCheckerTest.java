@@ -32,19 +32,16 @@ public class PangramCheckerTest {
         assertFalse(pangramChecker.isPangram("a quick movement of the enemy will jeopardize five gunboats"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void anotherPhraseMissingCharacterXIsNotPangram() {
         assertFalse(pangramChecker.isPangram("the quick brown fish jumps over the lazy dog"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void pangramWithUnderscoresIsRecognizedAsPangram() {
         assertTrue(pangramChecker.isPangram("the_quick_brown_fox_jumps_over_the_lazy_dog"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void pangramWithNumbersIsRecognizedAsPangram() {
         assertTrue(pangramChecker.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs"));
