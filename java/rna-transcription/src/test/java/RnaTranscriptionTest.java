@@ -36,19 +36,16 @@ public class RnaTranscriptionTest {
         assertEquals("A", rnaTranscription.transcribe("T"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testRnaTranscriptionOfAdenineIsUracil() {
         assertEquals("U", rnaTranscription.transcribe("A"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testRnaTranscription() {
         assertEquals("UGCACCAGAAUU", rnaTranscription.transcribe("ACGTGGTCTTAA"));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testRnaTranscriptionOfRnaThrowsAnError() {
         expectedException.expect(IllegalArgumentException.class);
