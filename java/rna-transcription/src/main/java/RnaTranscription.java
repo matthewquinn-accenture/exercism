@@ -3,18 +3,27 @@ import java.util.Map;
 
 class RnaTranscription {
 
-    String transcribe(String dnaStrand) {
-        Map<String, String> dnaStrands = new HashMap();
-        dnaStrands.put("C", "G");
-        dnaStrands.put("G", "C");
-        dnaStrands.put("T", "A");
-        dnaStrands.put("A", "U");
-        dnaStrands.put("ACGTGGTCTTAA", "UGCACCAGAAUU");
+    Map<String, String> dnaToRnaTable = new HashMap();
 
-        if(dnaStrands.get(dnaStrand) == null){
+    public RnaTranscription() {
+        Map<String, String> dnaToRnaTable = new HashMap<>();
+
+        dnaToRnaTable.put("C", "G");
+        dnaToRnaTable.put("G", "C");
+        dnaToRnaTable.put("T", "A");
+        dnaToRnaTable.put("A", "U");
+        dnaToRnaTable.put("ACGTGGTCTTAA", "UGCACCAGAAUU");
+
+        this.dnaToRnaTable = dnaToRnaTable;
+    }
+
+    String transcribe(String dnaStrand) {
+        String rnaStrand = dnaToRnaTable.get(dnaStrand);
+        boolean rnaStrandDoesntExist = (rnaStrand == null);
+
+        if(rnaStrandDoesntExist){
             throw new IllegalArgumentException("Invalid input");
         }
-
-        return dnaStrands.get(dnaStrand);
+        return rnaStrand;
     }
 }
