@@ -18,8 +18,8 @@ public class Hamming {
         char[] leftStrandChars = leftStrand.toCharArray();
         char[] rightStrandChars = rightStrand.toCharArray();
 
-        for (int i = 0; i < leftStrandChars.length; i++) {
-            boolean leftStrandCharNotEqualToRightStrandChar = leftStrandChars[i] != rightStrandChars[i];
+        for (int strandChar = 0; strandChar < leftStrandChars.length; strandChar++) {
+            boolean leftStrandCharNotEqualToRightStrandChar = leftStrandChars[strandChar] != rightStrandChars[strandChar];
 
             if (leftStrandCharNotEqualToRightStrandChar){
                     distance++;
