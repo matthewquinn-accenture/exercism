@@ -23,7 +23,6 @@ public class HammingTest {
         assertEquals(0, new Hamming("A", "A").getHammingDistance());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testNoDistanceBetweenLongIdenticalStrands() {
         assertEquals(0, new Hamming("GGACTGA", "GGACTGA").getHammingDistance());

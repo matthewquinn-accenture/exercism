@@ -1,12 +1,24 @@
 public class Hamming {
 
+    String leftStrand;
+    String rightStrand;
+    int distance = 0;
+
     Hamming(String leftStrand, String rightStrand) {
-        leftStrand = "A";
-        rightStrand = "A";
+        this.leftStrand = leftStrand;
+        this.rightStrand = rightStrand;
     }
 
     int getHammingDistance() {
-        return 0;
+        char[] leftStrandChars = leftStrand.toCharArray();
+        char[] rightStrandChars = rightStrand.toCharArray();
+
+        for (int i = 0; i < leftStrandChars.length; i++) {
+                if (leftStrandChars[i] != rightStrandChars[i]){
+                    distance++;
+                }
+            }
+        return distance;
     }
 
 }
