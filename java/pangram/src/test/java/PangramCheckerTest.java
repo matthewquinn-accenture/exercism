@@ -1,5 +1,4 @@
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -57,7 +56,6 @@ public class PangramCheckerTest {
         assertTrue(pangramChecker.isPangram("\"Five quacking Zephyrs jolt my wax bed.\""));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void upperAndLowerCaseVersionsOfTheSameCharacterShouldNotBeCountedSeparately() {
         assertFalse(pangramChecker.isPangram("the quick brown fox jumps over with lazy FX"));
