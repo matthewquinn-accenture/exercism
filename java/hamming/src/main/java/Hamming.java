@@ -7,6 +7,11 @@ public class Hamming {
     Hamming(String leftStrand, String rightStrand) {
         this.leftStrand = leftStrand;
         this.rightStrand = rightStrand;
+        boolean leftStrandLengthNotEqualToRightStrandLength = leftStrand.length() != rightStrand.length();
+
+        if(leftStrandLengthNotEqualToRightStrandLength){
+            throw new IllegalArgumentException("leftStrand and rightStrand must be of equal length.");
+        }
     }
 
     int getHammingDistance() {
@@ -14,7 +19,9 @@ public class Hamming {
         char[] rightStrandChars = rightStrand.toCharArray();
 
         for (int i = 0; i < leftStrandChars.length; i++) {
-                if (leftStrandChars[i] != rightStrandChars[i]){
+            boolean leftStrandCharNotEqualToRightStrandChar = leftStrandChars[i] != rightStrandChars[i];
+
+            if (leftStrandCharNotEqualToRightStrandChar){
                     distance++;
                 }
             }
