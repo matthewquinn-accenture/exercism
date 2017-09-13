@@ -18,7 +18,6 @@ public class HammingTest {
         assertEquals(0, new Hamming("", "").getHammingDistance());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testNoDistanceBetweenShortIdenticalStrands() {
         assertEquals(0, new Hamming("A", "A").getHammingDistance());
