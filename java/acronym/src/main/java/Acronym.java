@@ -12,10 +12,10 @@ class Acronym {
 
     String get() {
         Pattern firstCharOfEachWord = Pattern.compile("\\b[a-zA-Z]");
-        Matcher putsCharsToAcronym = firstCharOfEachWord.matcher(phrase);
+        Matcher charOfEachWord = firstCharOfEachWord.matcher(phrase);
 
-        while (putsCharsToAcronym.find()) {
-            acronym += putsCharsToAcronym.group();
+        while (charOfEachWord.find()) {
+            acronym += charOfEachWord.group();
         }
         return acronym;
     }
