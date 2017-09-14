@@ -24,23 +24,23 @@ class SpaceAge {
     }
 
     double onMars() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / (1.8808158 * earthSeconds);
     }
 
     double onJupiter() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / (11.862615 * earthSeconds);
     }
 
     double onSaturn() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / (29.447498 * earthSeconds);
     }
 
     double onUranus() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / (84.016846 * earthSeconds);
     }
 
     double onNeptune() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / (164.79132 * earthSeconds);
     }
 
 }
