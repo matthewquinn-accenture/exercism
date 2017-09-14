@@ -15,14 +15,17 @@ class Gigasecond {
     }
 
     LocalDateTime getDate() {
+        LocalDateTime date = getLocalDateTime();
+        return date;
+    }
+
+    private LocalDateTime getLocalDateTime() {
         ZoneId zoneId = ZoneId.of("America/Chicago");
         long epoch = birthDate.atStartOfDay(zoneId).toEpochSecond();
         long afterEpochSeconds = epoch + ONE_GIG;
+        LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochSecond(afterEpochSeconds), ZoneId.systemDefault());
 
-        LocalDateTime date =
-                LocalDateTime.ofInstant(Instant.ofEpochSecond(afterEpochSeconds), ZoneId.systemDefault());
-
-        return date;
+        return localDateTime;
     }
 
 }
