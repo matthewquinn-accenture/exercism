@@ -1,0 +1,6 @@
+.gradle/
+.idea/
+acronym.iml
+gradle/
+gradlew
+gradlew.bat
