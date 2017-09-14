@@ -1,17 +1,28 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.*;
 
 class Gigasecond {
 
+    private final static long ONE_GIG = 1_000_000_000;
+    LocalDate birthDate;
+    LocalDateTime birthDateTime;
+
     Gigasecond(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     Gigasecond(LocalDateTime birthDateTime) {
+        this.birthDateTime = birthDateTime;
     }
 
     LocalDateTime getDate() {
-        return LocalDateTime.of(2043, Month.JANUARY,1, 1, 46, 40);
+        ZoneId zoneId = ZoneId.of("America/Chicago");
+        long epoch = birthDate.atStartOfDay(zoneId).toEpochSecond();
+        long afterEpochSeconds = epoch + ONE_GIG;
+
+        LocalDateTime date =
+                LocalDateTime.ofInstant(Instant.ofEpochSecond(afterEpochSeconds), ZoneId.systemDefault());
+
+        return date;
     }
 
 }
