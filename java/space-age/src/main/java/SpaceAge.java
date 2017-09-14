@@ -8,6 +8,7 @@ class SpaceAge {
     public static final double SATURN_TIME_PER_EARTH_YEAR = 29.447498;
     public static final double URANUS_TIME_PER_EARTH_YEAR = 84.016846;
     public static final double NEPTUNE_TIME_PER_EARTH_YEAR = 164.79132;
+
     private double seconds;
 
     SpaceAge(double seconds) {
@@ -19,35 +20,43 @@ class SpaceAge {
     }
 
     double onEarth() {
-        return seconds / EARTH_SECONDS_PER_YEAR;
+        double ageOnEarth = seconds / EARTH_SECONDS_PER_YEAR;
+        return ageOnEarth;
     }
 
     double onMercury() {
-        return seconds / (MERCURY_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        double ageOnMercury = seconds / (MERCURY_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        return ageOnMercury;
     }
 
     double onVenus() {
-        return seconds / (VENUS_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        double ageOnVenus = seconds / (VENUS_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        return ageOnVenus;
     }
 
     double onMars() {
-        return seconds / (MARS_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        double ageOnMars = seconds / (MARS_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        return ageOnMars;
     }
 
     double onJupiter() {
-        return seconds / (JUPITER_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        double ageOnJupiter = seconds / (JUPITER_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        return ageOnJupiter;
     }
 
     double onSaturn() {
-        return seconds / (SATURN_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        double ageOnSaturn = seconds / (SATURN_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        return ageOnSaturn;
     }
 
     double onUranus() {
-        return seconds / (URANUS_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        double ageOnUranus = seconds / (URANUS_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        return ageOnUranus;
     }
 
     double onNeptune() {
-        return seconds / (NEPTUNE_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        double ageOnNeptune = seconds / (NEPTUNE_TIME_PER_EARTH_YEAR * EARTH_SECONDS_PER_YEAR);
+        return ageOnNeptune;
     }
 
 }
