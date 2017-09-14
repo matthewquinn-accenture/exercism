@@ -1,5 +1,4 @@
 import org.junit.Test;
-import org.junit.Ignore;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -30,7 +29,6 @@ public class GigasecondTest {
         assertEquals(LocalDateTime.of(1991, Month.MARCH, 27, 1, 46, 40), gigaSecond.getDate());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void withFullTimeSpecified() {
         Gigasecond gigaSecond = new Gigasecond(LocalDateTime.of(2015, Month.JANUARY, 24, 22, 0, 0));
@@ -38,7 +36,6 @@ public class GigasecondTest {
         assertEquals(LocalDateTime.of(2046, Month.OCTOBER, 2, 23, 46, 40), gigaSecond.getDate());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void withFullTimeSpecifiedAndDayRollover() {
         Gigasecond gigaSecond = new Gigasecond(LocalDateTime.of(2015, Month.JANUARY, 24, 23, 59, 59));

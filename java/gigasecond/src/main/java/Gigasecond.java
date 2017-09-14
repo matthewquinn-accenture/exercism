@@ -3,11 +3,10 @@ import java.time.*;
 class Gigasecond {
 
     private final static long ONE_GIG = 1_000_000_000;
-    LocalDate birthDate;
     LocalDateTime birthDateTime;
 
     Gigasecond(LocalDate birthDate) {
-        this.birthDate = birthDate;
+        birthDateTime = birthDate.atTime(0, 0, 0);
     }
 
     Gigasecond(LocalDateTime birthDateTime) {
@@ -15,12 +14,8 @@ class Gigasecond {
     }
 
     LocalDateTime getDate() {
-        ZoneId zoneId = ZoneId.of("America/Chicago");
-        long epoch = birthDate.atStartOfDay(zoneId).toEpochSecond();
-        long afterEpochSeconds = epoch + ONE_GIG;
-        LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochSecond(afterEpochSeconds), ZoneId.systemDefault());
-
-        return localDateTime;
+        LocalDateTime birthDateAtOneGig = birthDateTime.plusSeconds(ONE_GIG);
+        return birthDateAtOneGig;
     }
 
 }
