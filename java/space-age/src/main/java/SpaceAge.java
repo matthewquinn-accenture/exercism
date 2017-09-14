@@ -1,6 +1,9 @@
 class SpaceAge {
 
+    private double seconds;
+
     SpaceAge(double seconds) {
+        this.seconds = seconds;
     }
 
     double getSeconds() {
@@ -8,7 +11,7 @@ class SpaceAge {
     }
 
     double onEarth() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / 31557600;
     }
 
     double onMercury() {
