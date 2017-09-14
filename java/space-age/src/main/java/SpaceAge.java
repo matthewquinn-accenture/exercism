@@ -1,5 +1,6 @@
 class SpaceAge {
 
+    public static final int earthSeconds = 31_557_600;
     private double seconds;
 
     SpaceAge(double seconds) {
@@ -7,15 +8,15 @@ class SpaceAge {
     }
 
     double getSeconds() {
-        return 1_000_000;
+        return seconds;
     }
 
     double onEarth() {
-        return seconds / 31557600;
+        return seconds / earthSeconds;
     }
 
     double onMercury() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / (0.2408467 * earthSeconds);
     }
 
     double onVenus() {
