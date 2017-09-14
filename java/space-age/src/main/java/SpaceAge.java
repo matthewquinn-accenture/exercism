@@ -20,7 +20,7 @@ class SpaceAge {
     }
 
     double onVenus() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return seconds / (0.61519726 * earthSeconds);
     }
 
     double onMars() {
