@@ -1,0 +1,47 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+class Scrabble {
+
+    private Map<char[], Integer> scrabbleScoreCard = new HashMap<>();
+
+    private char[] onePointLetters = {'A','E','I','O','U',
+            'L','N','R','S','T'};
+    private char[] twoPointLetters = {'D','G'};
+    private char[] threePointLetters = {'B','C','M','P'};
+    private char[] fourPointLetters = {'F','H','V','W','Y'};
+    private char[] fivePointLetters = {'K'};
+    private char[] eightPointLetters = {'J','X'};
+    private char[] tenPointLetters = {'Q','Z'};
+
+    private String word;
+    private int score = 0;
+
+    Scrabble(String word) {
+        this.word = word.toUpperCase();
+
+
+        scrabbleScoreCard.put(onePointLetters, 1);
+        scrabbleScoreCard.put(twoPointLetters, 2);
+        scrabbleScoreCard.put(threePointLetters, 3);
+        scrabbleScoreCard.put(fourPointLetters, 4);
+        scrabbleScoreCard.put(fivePointLetters, 5);
+        scrabbleScoreCard.put(eightPointLetters, 8);
+        scrabbleScoreCard.put(tenPointLetters, 10);
+    }
+
+    int getScore() {
+        Set<Character> keys = scrabbleScoreCard.get();
+
+        for(char letterInWord : keys){
+
+
+            System.out.println(scrabbleScoreCard.get(letterInWord));
+            score += scrabbleScoreCard.get(letterInWord);
+
+        }
+        return score;
+    }
+
+}
