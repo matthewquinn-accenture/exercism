@@ -1,0 +1,7 @@
+.gradle/
+.idea/
+difference-of-squares.iml
+gradle/
+gradlew
+gradlew.bat
+build/
