@@ -7,16 +7,16 @@ class RaindropConverter {
         boolean numberHas3PrimeFactor = number % 3 == 0;
         boolean numberHasNoPrimeFactor = number == 1 || number == 52 || number == 12121;
 
-        if (numberHas7PrimeFactor) {
-            rainDrop = "Plong";
+        if (numberHas3PrimeFactor) {
+            rainDrop = "Pling";
         }
 
         if (numberHas5PrimeFactor){
-            rainDrop = "Plang";
+            rainDrop += "Plang";
         }
 
-        if (numberHas3PrimeFactor) {
-            rainDrop = "Pling";
+        if (numberHas7PrimeFactor) {
+            rainDrop += "Plong";
         }
 
         if(numberHasNoPrimeFactor){
