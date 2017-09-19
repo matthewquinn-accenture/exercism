@@ -13,8 +13,12 @@ public class DifferenceOfSquaresCalculator {
         return squareOfSum;
     }
 
-    public int computeSumOfSquaresTo(int i) {
-        return 1;
+    public int computeSumOfSquaresTo(int number) {
+        for (int i = number; 1 <= number; number--) {
+            result += (int) Math.pow(number, 2);;
+        }
+
+        return result;
     }
 
     public int computeDifferenceOfSquares(int i) {
