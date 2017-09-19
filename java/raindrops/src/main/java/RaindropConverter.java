@@ -16,19 +16,23 @@ class RaindropConverter {
     }
 
     private boolean isNumberAPrimeFactorOf3(int number) {
-        return number % 3 == 0;
+        boolean factorOf3 = number % 3 == 0;
+        return factorOf3;
     }
 
     private boolean isNumberAPrimeFactorOf5(int number) {
-        return number % 5 == 0;
+        boolean factorOf5 = number % 5 == 0;
+        return factorOf5;
     }
 
     private boolean isNumberAPrimeFactorOf7(int number) {
-        return number % 7 == 0;
+        boolean factorOf7 = number % 7 == 0;
+        return factorOf7;
     }
 
     private boolean isNumberANonPrime(int number) {
-        return !isNumberAPrimeFactorOf3(number) && !isNumberAPrimeFactorOf5(number) && !isNumberAPrimeFactorOf7(number);
+        boolean nonFactor = !isNumberAPrimeFactorOf3(number) && !isNumberAPrimeFactorOf5(number) && !isNumberAPrimeFactorOf7(number);
+        return nonFactor;
     }
 
 }
