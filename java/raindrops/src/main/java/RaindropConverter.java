@@ -1,7 +1,8 @@
 class RaindropConverter {
 
+    private String rainDrop = "";
+
     String convert(int number) {
-        String rainDrop = "";
         boolean numberHas3PrimeFactor = number % 3 == 0;
         boolean numberHas5PrimeFactor = number % 5 == 0;
         boolean numberHas7PrimeFactor = number % 7 == 0;
