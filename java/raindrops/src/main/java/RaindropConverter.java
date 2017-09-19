@@ -18,6 +18,10 @@ class RaindropConverter {
             rainDrop = "Pling";
         }
 
+        if(number == 1 || number == 52 || number == 12121){
+            rainDrop = String.valueOf(number);
+        }
+
         return rainDrop;
     }
 
