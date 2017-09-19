@@ -2,7 +2,7 @@ public class DifferenceOfSquaresCalculator {
 
 
     public int computeSquareOfSumTo(int i) {
-        return 0;
+        return i;
     }
 
     public int computeSumOfSquaresTo(int i) {
