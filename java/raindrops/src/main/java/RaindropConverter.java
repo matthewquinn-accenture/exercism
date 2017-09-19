@@ -1,7 +1,14 @@
 class RaindropConverter {
 
     String convert(int number) {
-        return "Pling";
+        String rainDrop = "";
+
+        if (number % 3 == 0) {
+            rainDrop = "Pling";
+        } else {
+            rainDrop = "Plang";
+        }
+        return rainDrop;
     }
 
 }
