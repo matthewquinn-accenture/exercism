@@ -1,19 +1,20 @@
 public class DifferenceOfSquaresCalculator {
 
+    private int result = 0;
 
     public int computeSquareOfSumTo(int number) {
 
-        int sum = 0;
-
         for (int i = 1; i <= number; i++) {
-            sum += i;
+            result += i;
         }
 
-        return (int) Math.pow(sum, 2);
+        int squareOfSum = (int) Math.pow(result, 2);
+
+        return squareOfSum;
     }
 
     public int computeSumOfSquaresTo(int i) {
-        return 0;
+        return 1;
     }
 
     public int computeDifferenceOfSquares(int i) {
