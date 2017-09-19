@@ -5,6 +5,7 @@ class RaindropConverter {
         boolean numberHas7PrimeFactor = number % 7 == 0;
         boolean numberHas5PrimeFactor = number % 5 == 0;
         boolean numberHas3PrimeFactor = number % 3 == 0;
+        boolean numberHasNoPrimeFactor = number == 1 || number == 52 || number == 12121;
 
         if (numberHas7PrimeFactor) {
             rainDrop = "Plong";
@@ -18,7 +19,7 @@ class RaindropConverter {
             rainDrop = "Pling";
         }
 
-        if(number == 1 || number == 52 || number == 12121){
+        if(numberHasNoPrimeFactor){
             rainDrop = String.valueOf(number);
         }
 
