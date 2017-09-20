@@ -1,40 +1,26 @@
 public class DifferenceOfSquaresCalculator {
 
-    private int resultSquareOfSum = 0;
-    private int resultSumOfSquare = 0;
-
     public int computeSquareOfSumTo(int number) {
-
+        int numberSum = 0;
         for (int i = 1; i <= number; i++) {
-            resultSquareOfSum += i;
+            numberSum += i;
         }
-
-        int squareOfSum = (int) Math.pow(resultSquareOfSum, 2);
-
-        return squareOfSum;
+        return squareNumber(numberSum);
     }
 
     public int computeSumOfSquaresTo(int number) {
-
+        int numberSum = 0;
         for (int i = number; 1 <= number; number--) {
-            resultSumOfSquare += (int) Math.pow(number, 2);;
+            numberSum += squareNumber(number);
         }
-
-        return resultSumOfSquare;
+        return numberSum;
     }
 
     public int computeDifferenceOfSquares(int number) {
+        return computeSquareOfSumTo(number) - computeSumOfSquaresTo(number);
+    }
 
-        for (int i = 1; i <= number; i++) {
-            resultSquareOfSum += i;
-        }
-
-        int squareOfSum = (int) Math.pow(resultSquareOfSum, 2);
-
-        for (int i = number; 1 <= number; number--) {
-            resultSumOfSquare += (int) Math.pow(number, 2);;
-        }
-
-        return squareOfSum - resultSumOfSquare;
+    private int squareNumber(int number) {
+        return number * number;
     }
 }
